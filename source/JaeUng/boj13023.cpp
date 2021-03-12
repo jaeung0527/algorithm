@@ -31,9 +31,12 @@ void solve()
 {
     for(int i = 0; i < N; i++)
     {
-        visited[i] = true;
-        dfs(i, 1);
-        visited[i] = false;
+        if(!ans)
+        {
+            visited[i] = true;
+            dfs(i, 1);
+            visited[i] = false;
+        }
     }
 }
 
