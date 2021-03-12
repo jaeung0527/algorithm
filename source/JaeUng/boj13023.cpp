@@ -38,6 +38,7 @@ void solve()
             visited[i] = false;
         }
     }
+    cout << ans;
 }
 
 int main()
@@ -53,5 +54,4 @@ int main()
         graph[to].push_back(from);
     }
     solve();
-    cout << ans;
 }
