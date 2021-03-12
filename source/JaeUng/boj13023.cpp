@@ -18,7 +18,7 @@ void dfs(int from, int depth)
 
     for(int to : graph[from])
     {
-        if(!visited[to] && !ans)
+        if(!visited[to] &&!ans)
         {
             visited[to] = true;
             dfs(to, depth + 1);
@@ -31,14 +31,10 @@ void solve()
 {
     for(int i = 0; i < N; i++)
     {
-        if(!ans)
-        {
-            visited[i] = true;
-            dfs(i, 1);
-            visited[i] = false;
-        }
+        visited[i] = true;
+        dfs(i, 1);
+        visited[i] = false;
     }
-    cout << ans;
 }
 
 int main()
@@ -54,4 +50,5 @@ int main()
         graph[to].push_back(from);
     }
     solve();
+    cout << ans;
 }
